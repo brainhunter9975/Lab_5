@@ -36,6 +36,9 @@ public class BankAccount {
         return accountNumber;
     }
 
+    public String getAccountName(){
+        return accountName;
+    }
     public String getAccountSummary() {
         return "Номер рахунку: " + accountNumber + ", Ім'я: " + accountName + ", Сума: " + balance;
     }
