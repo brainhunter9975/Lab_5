@@ -2,8 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -13,7 +12,7 @@ public class Main {
             System.out.println("\n1. Створити рахунок\n2. Знайти рахунок\n3. Перевести кошти\n4. Вийти");
             System.out.print("Ввеіть номер дії: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Очистка буфера
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -21,7 +20,7 @@ public class Main {
                     String accountName = scanner.nextLine();
                     System.out.print("Введіть стартовий депозит: ");
                     double initialDeposit = scanner.nextDouble();
-                    scanner.nextLine(); // Очистка буфера
+                    scanner.nextLine();
 
                     BankAccount createdAccount = bank.createAccount(accountName, initialDeposit);
                     System.out.println("Рахунок створено: " + createdAccount.getAccountSummary());
