@@ -13,17 +13,17 @@ public class BankAccount {
 
     public void deposit(double amount) throws NegativeAmountException {
         if (amount < 0) {
-            throw new NegativeAmountException("Amount cannot be negative");
+            throw new NegativeAmountException("Сума не може бути від'ємною");
         }
         balance += amount;
     }
 
     public void withdraw(double amount) throws InsufficientFundsException, NegativeAmountException {
         if (amount < 0) {
-            throw new NegativeAmountException("Amount cannot be negative");
+            throw new NegativeAmountException("Сума не може бути від'ємною");
         }
         if (amount > balance) {
-            throw new InsufficientFundsException("Insufficient funds");
+            throw new InsufficientFundsException("Недостатньо коштів");
         }
         balance -= amount;
     }
@@ -37,6 +37,6 @@ public class BankAccount {
     }
 
     public String getAccountSummary() {
-        return "Account Number: " + accountNumber + ", Name: " + accountName + ", Balance: " + balance;
+        return "Номер рахунку: " + accountNumber + ", Ім'я: " + accountName + ", Сума: " + balance;
     }
 }

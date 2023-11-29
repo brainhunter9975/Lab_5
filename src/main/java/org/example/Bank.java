@@ -23,7 +23,7 @@ public class Bank {
                 return account;
             }
         }
-        throw new AccountNotFoundException("Account not found");
+        throw new AccountNotFoundException("Рахунок не знайдено");
     }
 
     public void transferMoney(int fromAccountNumber, int toAccountNumber, double amount)
